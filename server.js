@@ -10,6 +10,7 @@ const mongoose = require("mongoose")
 const indexRouter = require("./routes/index")
 const authorRouter = require("./routes/authors")
 const bookRouter = require("./routes/books")
+const methodOverride = require("method-override")
 
 
 mongoose.connect(process.env.DATABASE_URL)
@@ -23,7 +24,7 @@ app.set("layout", "layouts/layout")
 app.use(expressLayouts)
 app.use(express.static("public"))
 app.use(express.urlencoded({ limit: "10mb", extended: false }));
-
+app.use(methodOverride("_method"))
 
 app.use("/", indexRouter)
 app.use("/authors", authorRouter)
