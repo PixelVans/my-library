@@ -1,0 +1,301 @@
+:root{
+     font-size: 20px;
+     color: var(--color-text-light);
+
+    --book-cover-width: 200px;
+    --book-cover-width-large: 175px;
+    --book-cover-aspect-ratio: 0.75;
+
+
+     --color-base-hue:200;
+     --color-danger-hue-offset: 180;
+     --color-danger-hue: calc(var(--color-base-hue) - var(--color-danger-hue-offset));
+     
+     --color-background-dark: hsl(var(--color-base-hue),100%, 8%);
+     --color-background-light: hsl(var(--color-base-hue),100%,16%);
+
+    --nav-title-font-size: 3rem;
+    --nav-title-font-weight: bold;
+     --color-text-light: hsl(var(--color-base-hue),100%,87%);
+     --nav-link-font-weight: 300;
+
+     --color-btn-border:black;
+     --color-btn-primary-text:hsl(var(--color-base-hue),100%,20%);
+     --color-btn-primary-text-dark:hsl(var(--color-base-hue),100%,10%);
+     --color-btn-primary-background:hsl(var(--color-base-hue),100%,83%);
+     --color-btn-danger-text: black;
+     --color-btn-danger-text-dark: black;
+     --color-btn-danger-background: hsl(var(--color-danger-hue),100%,83%);
+     --color-btn-primary-background-dark: hsl(var(--color-base-hue),100%,73%);
+
+     --form-input-border-color-light:hsl(var(--color-base-hue),100%,80%);
+     --form-input-background-color:hsl(var(--color-base-hue),100%,31%);
+     --form-input-border-color:hsl(var(--color-base-hue),100%,50%);
+     --color-btn-danger-background-dark: hsl(var(--color-danger-hue),100%,73%);
+     --form-label-font-size: 1.2rem;
+    }
+
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right,
+     var(--color-background-dark),
+    var(--color-background-light));
+    
+}
+
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+   
+    margin-bottom: 3rem;
+}
+.inner-container{
+     margin: 0 2rem;
+}
+
+/* header styles */
+.header-title{
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-size: var(--nav-title-font-size);
+    font-weight: var(--nav-title-font-weight);
+}
+/* header nav */
+.header-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.header-nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav li a {
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-weight: var(--nav-link-font-weight);
+    padding: 1rem;
+}
+
+.header-nav li {
+    list-style: none;
+}
+
+.header-nav li a:hover, .header-title:hover {
+    color: white
+}
+
+.page-header{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+/* buttons styles */
+.btn {
+    border: 1px solid var(--color-btn-border);
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    font-family: tahoma;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.btn-row > * {
+    margin-left: 1rem;
+}
+
+.btn-row > *:first-child{
+    margin-left: 0;
+}
+
+
+ .btn-primary{
+    color: var(--color-btn-primary-text);
+    background-color: var(--color-btn-primary-background);
+ }
+
+ .btn-danger{
+    color: var(--color-btn-danger-text);
+    background-color: var(--color-btn-danger-background);
+ }
+
+ .btn-primary:hover{
+    color: var(--color-btn-primary-text-dark);
+    background-color: var(--color-btn-primary-background-dark);
+ }
+
+ .btn-danger:hover{
+    color: var(--color-btn-danger-text-dark);
+    background-color: var(--color-btn-danger-background-dark);
+ }
+
+.form-row {
+    display: flex;
+    margin-bottom: .5rem;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.form-item-no-grow {
+    flex-grow: 0;
+}
+
+.form-row-end {
+    justify-content: flex-end;
+}
+
+
+.form-item:first-child{
+    margin-left: 0;
+}
+
+.form-item > label {
+    font-size: var(--form-label-font-size);
+    margin-bottom: .25rem;
+    margin-left: .25rem;
+}
+
+.form-item input, .form-item select, .form-item textarea
+{
+    height: 2rem;
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+    border: 1px solid var(--form-input-border-color);
+    background-color: var(--form-input-background-color);
+    color: var(--color-text-light);
+     font: 1rem;
+     font-weight: normal;
+     font-family: tahoma;
+     outline: none;
+}
+
+.form-item input:focus, .form-item select:focus, .form-item textarea:focus
+{
+    border-color: var(--form-input-border-color-light);
+}
+
+.form-item textarea{
+    height: 100%;
+    resize: none;
+}
+
+.form-item select option {
+    background-color: black;
+}
+
+.filepond--root {
+    font-family: Tahoma;
+    margin-bottom: 0;
+}
+
+.filepond--panel-root{
+    background-color: var(--form-input-background-color);
+    border: 1 px solid var(--form-input-border-color);
+}
+
+.filepond--drop-label{
+    color: var(--color-text-light);
+    font-size: inherit;
+
+}
+
+
+.author-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.author-name {
+    font-size: 1.5rem;
+}
+
+
+.book-cover {
+    width: var(--book-cover-width);
+    height: calc(var(--book-cover-width)/ var(
+        --book-cover-aspect-ratio
+    ))
+}
+.book-cover-large {
+    --book-cover-width: var(--book-cover-width-large)
+}
+
+.book-grid {
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill,
+    var(--book-cover-width));
+}
+
+.book-grid-large {
+    grid-template-columns: repeat(auto-fill,
+    var(--book-cover-width-large));
+}
+
+
+.error-message{
+    color: hsl(var(--color-danger-hue),100%,50% )
+}
+
+
+.book-details {
+    display:flex;
+
+}
+
+.book-details-label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    align-self: flex-start;
+}
+
+.book-details-grid {
+    display: grid;
+    align-content: flex-start;
+    align-items: center;
+    grid-gap: 1rem;
+    grid-template-columns: auto auto;
+    margin-left: 25px;
+}
+
+.book-details-btn-grid {
+    display: grid;
+    justify-items: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    grid-template-areas: 
+    "edit delete"
+    "author author";
+    grid-gap: .5rem;
+    margin-top: .5rem;
+}
+
+ .book-details-author-button{
+    grid-area: author;
+    justify-self: stretch;
+ }

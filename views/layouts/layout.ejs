@@ -15,15 +15,22 @@
     <script defer src="/js/fileUpload.js"></script>
     
     
-    <!-- Correct path to your JavaScript file inside the public/javascripts folder -->
+    
+    <link id="main-css" rel="stylesheet" href="/stylesheets/main.css">
+
+
     
 
     <title>MYlibrary</title>
 </head>
 <body>
+    <div class="container">
     <%- include("../partials/header.ejs") %>
+    <div class="inner-container">
     <%- include("../partials/errmsg.ejs") %>
     <%- body %>
+</div>
+</div>
 </body>
 
 </html>
