@@ -300,3 +300,130 @@ body{
     grid-area: author;
     justify-self: stretch;
  }
+
+
+ @media (max-width: 767px) {
+    /* Styles for mobile devices */
+    .header-title{
+        text-decoration: none;
+        color: var(--color-text-light);
+        font-size: 20px;
+        font-weight: var(--nav-title-font-weight);
+        font-family: tahoma;
+        margin-left: 20px;
+    }
+    .header-nav ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    .page-header{
+        font-size: 17px;
+       align-items: center;
+       justify-content: center;
+    }
+    .inner-container{
+        text-align: center;
+       
+    }
+    .book-cover{
+        height: 150px;
+        width: 100px;
+    }
+    .book-grid{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .btn {
+        border: 1px solid var(--color-btn-border);
+        border-radius: 7px;
+        padding:13px;
+        font-size: 12px;
+        font-family: tahoma;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+    }
+    .form-row{
+        display: block;
+        text-align: center;
+    }
+
+    .form-item input, .form-item select, .form-item textarea
+{
+    height: 30px;
+    padding: 5px;
+    border-radius: .25rem;
+    border: 1px solid var(--form-input-border-color);
+    background-color: var(--form-input-background-color);
+    color: var(--color-text-light);
+     font: 11px;
+     font-weight: normal;
+     font-family: tahoma;
+     outline: none;
+    
+}
+label{
+    text-align: center;
+    font-size: 17px;
+}
+
+.form-item > label {
+    font-size: var(--form-label-font-size);
+    margin: auto;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+   
+}
+
+.book-details-grid {
+    display: block;
+   
+    align-items: center;
+    
+}
+
+.book-details-label {
+    font-size: 15px;
+    font-weight: 500;
+    align-self: flex-start;
+}
+
+.author-name {
+    font-size: 20px;
+    margin-left: 0;
+}
+
+.btn-primary{
+    height: 20px;
+    width: 70px;
+    padding: 2px 9px;;
+    margin-top: 0;
+    font-size: 10px;
+}
+
+.btn-danger{
+    height: 20px;
+    width: 50px;
+    padding: 0;
+    margin-top: 0;
+    margin-right: 20px;
+}
+
+.author-row{
+    display: flex;
+    margin-left: 0;
+}
+.btn-row{
+   display: block;
+   width: 150px;
+}
+
+  }
+  
