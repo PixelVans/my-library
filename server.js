@@ -37,4 +37,9 @@ app.use("/books",bookRouter)
 
 
 
-app.listen(process.env.PORT || 3000)
+const PORT = process.env.PORT || 3000;
+
+// Start the server and bind to all interfaces
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
