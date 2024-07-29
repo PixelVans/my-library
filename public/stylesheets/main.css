@@ -14,7 +14,7 @@
      --color-background-dark: hsl(var(--color-base-hue),100%, 8%);
      --color-background-light: hsl(var(--color-base-hue),100%,16%);
 
-    --nav-title-font-size: 3rem;
+    --nav-title-font-size: 2rem;
     --nav-title-font-weight: bold;
      --color-text-light: hsl(var(--color-base-hue),100%,87%);
      --nav-link-font-weight: 300;
@@ -64,6 +64,7 @@ body{
     color: var(--color-text-light);
     font-size: var(--nav-title-font-size);
     font-weight: var(--nav-title-font-weight);
+    font-family: tahoma;
 }
 /* header nav */
 .header-nav{
