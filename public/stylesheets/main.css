@@ -315,7 +315,7 @@ body{
     .header-nav ul {
         display: block;
         margin: 0;
-        padding: 0;
+        padding: 5px 0;
         font-size: 18px;
         margin-top: 10px;
     }
@@ -425,5 +425,11 @@ label{
    width: 150px;
 }
 
+.header-nav ul li {
+    
+    padding: 5px 0;
+    font-size: 18px;
+    margin-top: 10px;
+}
   }
   
